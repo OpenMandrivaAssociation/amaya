@@ -4,7 +4,7 @@ Release: 	%mkrel 1
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}.tar.bz2
-Source1: 	%name.1.bz2
+Source1: 	%name.*
 Patch0:		amaya-0.9.1-fix-build.patch
 Patch1:		amaya-9.53-fix-build-x86_64.patch
 Patch2:		amaya-9.53-png_fix.patch
