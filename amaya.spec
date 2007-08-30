@@ -65,7 +65,7 @@ Icon=networking_www_section
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GTK;Network;WebBrowser;WebDevelopment;X-MandrivaLinux-Internet-WebBrowsers
+Categories=GTK;Network;WebBrowser;WebDevelopment;X-MandrivaLinux-Internet-WebBrowsers;
 EOF
 
 # Man pages
