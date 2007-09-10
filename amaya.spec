@@ -1,9 +1,9 @@
 Name:		amaya
-Version: 	9.53
+Version: 	9.55
 Release: 	%mkrel 1
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
-Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}.tar.bz2
+Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-2.tgz
 Source1: 	%name.1.bz2
 Patch0:		amaya-0.9.1-fix-build.patch
 Patch1:		amaya-9.53-fix-build-x86_64.patch
@@ -30,8 +30,8 @@ draft standards for HTML/XHTML.
 %prep
 %setup -q -n Amaya%{version}
 #%patch0 -p0
-%patch1 -p0
-%patch2 -p0
+#%patch1 -p0
+#%patch2 -p0
 
 %build
 cd Amaya
