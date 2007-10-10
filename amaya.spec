@@ -6,7 +6,7 @@ Group:   	Networking/WWW
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-2.tgz
 Source1: 	%name.1.bz2
 Patch0:		amaya-0.9.1-fix-build.patch
-Patch1:		amaya-9.53-fix-build-x86_64.patch
+Patch1:		amaya-9.55-fix-build-x86_64.patch
 Patch2:		amaya-9.53-png_fix.patch
 # enable to link with system libw3c-libwww lib:
 # BuildConflicts: w3c-libwww-devel
