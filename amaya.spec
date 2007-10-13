@@ -30,7 +30,7 @@ draft standards for HTML/XHTML.
 %prep
 %setup -q -n Amaya%{version}
 #%patch0 -p0
-#%patch1 -p0
+%patch1 -p0
 #%patch2 -p0
 
 %build
