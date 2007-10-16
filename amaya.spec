@@ -50,8 +50,8 @@ cd wx-build
 make install
 
 pushd $RPM_BUILD_ROOT/%_bindir/
-ln -sf ../../usr/%_lib/Amaya-*/wx/bin/amaya amaya-wx
-ln -sf ../../usr/%_lib/Amaya-*/wx/bin/amaya amaya
+ln -sf ../../usr/%_lib/Amaya/wx/bin/amaya amaya-wx
+ln -sf ../../usr/%_lib/Amaya/wx/bin/amaya amaya
 popd
 
 # Mandriva menu entry
