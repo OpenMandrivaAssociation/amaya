@@ -38,7 +38,7 @@ cd Amaya
 export CFLAGS="$RPM_OPT_FLAGS"
 mkdir -p wx-build
 cd wx-build
-../configure --prefix=$RPM_BUILD_ROOT%_libdir --exec-prefix=$RPM_BUILD_ROOT/%_prefix --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
+../configure --prefix=$RPM_BUILD_ROOT%_libdir --exec-prefix=%_prefix --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
 # make -j2 fails
 make
 
