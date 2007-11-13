@@ -7,7 +7,6 @@ Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-2.tgz
 Source1: 	%name.1.bz2
 Patch0:		amaya-0.9.1-fix-build.patch
 Patch1:		amaya-9.55-fix-build-x86_64.patch
-Patch2:		amaya-9.53-png_fix.patch
 # enable to link with system libw3c-libwww lib:
 # BuildConflicts: w3c-libwww-devel
 # Patch2:		amaya-0.9.1-fix-link.patch.bz2
@@ -31,18 +30,13 @@ draft standards for HTML/XHTML.
 %setup -q -n Amaya%{version}
 #%patch0 -p0
 %patch1 -p0
-#%patch2 -p0
 
 %build
 cd Amaya
 export CFLAGS="$RPM_OPT_FLAGS"
 mkdir -p wx-build
 cd wx-build
-<<<<<<< .mine
 ../configure --prefix=%_libdir --exec=%_libdir --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
-=======
-../configure --prefix=$RPM_BUILD_ROOT%_libdir --exec-prefix=%_prefix --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
->>>>>>> .r108558
 # make -j2 fails
 make
 
