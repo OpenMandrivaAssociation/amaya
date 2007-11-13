@@ -1,6 +1,6 @@
 Name:		amaya
 Version: 	9.55
-Release: 	%mkrel 2
+Release: 	%mkrel 3
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-2.tgz
@@ -38,7 +38,11 @@ cd Amaya
 export CFLAGS="$RPM_OPT_FLAGS"
 mkdir -p wx-build
 cd wx-build
+<<<<<<< .mine
+../configure --prefix=%_libdir --exec=%_libdir --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
+=======
 ../configure --prefix=$RPM_BUILD_ROOT%_libdir --exec-prefix=%_prefix --libdir=%_libdir --enable-system-redland --enable-system-wx --with-gl
+>>>>>>> .r108558
 # make -j2 fails
 make
 
@@ -46,8 +50,9 @@ make
 cd Amaya
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%_mandir/man1
+mkdir -p $RPM_BUILD_ROOT/%_bindir
 cd wx-build
-make install
+make install prefix=$RPM_BUILD_ROOT%_libdir
 
 pushd $RPM_BUILD_ROOT/%_bindir/
 ln -sf ../../usr/%_lib/Amaya/wx/bin/amaya amaya-wx
