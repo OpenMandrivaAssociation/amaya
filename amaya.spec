@@ -12,7 +12,6 @@ Patch1:		amaya-9.55-fix-build-x86_64.patch
 # Patch2:		amaya-0.9.1-fix-link.patch.bz2
 License: 	W3C License
 Url:     	http://www.w3.org/Amaya/
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: 	ungif-devel jpeg-devel png-devel libz-devel
 BuildRequires: 	perl bison flex
 BuildRequires:	libx11-devel freetype2-devel
