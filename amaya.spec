@@ -1,9 +1,9 @@
 Name:		amaya
-Version: 	9.55
-Release: 	%mkrel 3
+Version: 	9.99
+Release: 	%mkrel 1
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
-Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-2.tgz
+Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-4.tgz
 Source1: 	%name.1.bz2
 Patch0:		amaya-0.9.1-fix-build.patch
 Patch1:		amaya-9.55-fix-build-x86_64.patch
@@ -16,7 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: 	ungif-devel jpeg-devel png-devel libz-devel
 BuildRequires: 	perl bison flex
 BuildRequires:	libx11-devel freetype2-devel
-BuildRequires:	redland-devel wxgtku2.6-devel
+BuildRequires:	redland-devel wxgtku2.8-devel
 Obsoletes:	amaya-common amaya-gtk amaya-lesstif
 Provides:	amaya-common amaya-wx 
 
@@ -29,7 +29,7 @@ draft standards for HTML/XHTML.
 %prep
 %setup -q -n Amaya%{version}
 #%patch0 -p0
-%patch1 -p0
+#%patch1 -p0
 
 %build
 cd Amaya
