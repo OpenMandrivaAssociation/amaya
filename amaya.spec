@@ -1,6 +1,6 @@
 Name:		amaya
 Version: 	9.99
-Release: 	%mkrel 2
+Release: 	%mkrel 3
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-4.tgz
@@ -19,8 +19,6 @@ BuildRequires:	libx11-devel freetype2-devel
 BuildRequires:	redland-devel wxgtku2.8-devel
 Obsoletes:	amaya-common amaya-gtk amaya-lesstif
 Provides:	amaya-common amaya-wx 
-# (tv) not automatically picked, amaya won't start w/o it (#35671):
-Requires: %{_lib}wxgtkglu2.6
 
 %description
 Amaya is a WYSIWYG browser/web authoring tool from the W3C.
