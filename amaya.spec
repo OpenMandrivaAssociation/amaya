@@ -1,9 +1,10 @@
+%define prever pre
 Name:		amaya
-Version: 	9.99
-Release: 	%mkrel 3
+Version: 	10.0
+Release: 	%mkrel -c %prever 1
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
-Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-4.tgz
+Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}-%{prever}.tgz
 Source1: 	%name.1.bz2
 Patch0:		amaya-0.9.1-fix-build.patch
 Patch1:		amaya-9.55-fix-build-x86_64.patch
@@ -28,8 +29,6 @@ draft standards for HTML/XHTML.
 
 %prep
 %setup -q -n Amaya%{version}
-#%patch0 -p0
-#%patch1 -p0
 
 %build
 cd Amaya
