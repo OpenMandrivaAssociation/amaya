@@ -1,6 +1,6 @@
 Name:		amaya
 Version: 	10.0
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 Summary: 	W3C's browser/web authoring tool
 Group:   	Networking/WWW
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-sources-%{version}.tgz
