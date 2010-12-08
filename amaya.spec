@@ -1,6 +1,6 @@
 %define	name amaya
 %define version 11.3.1
-%define release %mkrel 1
+%define release %mkrel 2
 %define wxwidgets_version 2.9.0
 
 %define system_libwww	0
