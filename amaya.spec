@@ -2,14 +2,14 @@
 %{?_with_system_libwww:	%global system_libwww 1}
 
 Name:		amaya
-Version: 	11.4.4
-Release: 	%mkrel 1
-Summary: 	Web Browser/Editor from the World Wide Web Consortium
-Group:   	Networking/WWW
-License: 	W3C License
+Version:	11.4.4
+Release:	%mkrel 1
+Summary:	Web Browser/Editor from the World Wide Web Consortium
+Group:		Networking/WWW
+License:	W3C License
 Url:		http://www.w3.org/Amaya/
-Source0: 	http://www.w3.org/Amaya/Distribution/amaya-fullsrc-%{version}.tgz
-Source1: 	%{name}.1.bz2
+Source0:	http://www.w3.org/Amaya/Distribution/amaya-fullsrc-%{version}.tgz
+Source1:	%{name}.1.bz2
 #2010-01-06
 Source10:	http://www.w3.org/Amaya/Distribution/Dutch.tgz
 Source11:	http://www.w3.org/Amaya/Distribution/English.tgz
@@ -18,7 +18,10 @@ Source13:	http://www.w3.org/Amaya/Distribution/German.tgz
 Source14:	http://www.w3.org/Amaya/Distribution/Italian.tgz
 Source15:	http://www.w3.org/Amaya/Distribution/Spanish.tgz
 Source16:	http://www.w3.org/Amaya/Distribution/Swedish.tgz
+Patch0:		amaya-11.4.4-dso.patch
+Patch1:		amaya-11.4.4-gzfile.patch
 Patch2:		amaya-11.4.4-libpng15.patch
+Patch3:		amaya-11.4.4-desktop.patch
 BuildRequires:	freetype-devel
 BuildRequires:	gtk2-devel
 BuildRequires:	imlib-devel
@@ -53,7 +56,12 @@ draft standards for HTML/XHTML.
 
 %prep
 %setup -q -n Amaya -c
+%if %{mdvver} >= 201200
+%patch0 -p0
+%endif
+%patch1 -p0
 %patch2 -p1
+%patch3 -p0
 
 %build
 # use system mesa
