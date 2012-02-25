@@ -18,7 +18,7 @@ Source13:	http://www.w3.org/Amaya/Distribution/German.tgz
 Source14:	http://www.w3.org/Amaya/Distribution/Italian.tgz
 Source15:	http://www.w3.org/Amaya/Distribution/Spanish.tgz
 Source16:	http://www.w3.org/Amaya/Distribution/Swedish.tgz
-Patch2:		amaya-fix-thotlib-png14.patch
+Patch2:		amaya-11.4.4-libpng15.patch
 BuildRequires:	freetype-devel
 BuildRequires:	gtk2-devel
 BuildRequires:	imlib-devel
