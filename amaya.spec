@@ -9,7 +9,7 @@ Group:   	Networking/WWW
 License: 	W3C License
 Url:		http://www.w3.org/Amaya/
 Source0: 	http://www.w3.org/Amaya/Distribution/amaya-fullsrc-%{version}.tgz
-Source1: 	%name.1.bz2
+Source1: 	%{name}.1.bz2
 #2010-01-06
 Source10:	http://www.w3.org/Amaya/Distribution/Dutch.tgz
 Source11:	http://www.w3.org/Amaya/Distribution/English.tgz
@@ -18,8 +18,7 @@ Source13:	http://www.w3.org/Amaya/Distribution/German.tgz
 Source14:	http://www.w3.org/Amaya/Distribution/Italian.tgz
 Source15:	http://www.w3.org/Amaya/Distribution/Spanish.tgz
 Source16:	http://www.w3.org/Amaya/Distribution/Swedish.tgz
-Patch0:		amaya-0.9.1-fix-build.patch
-Patch1:		amaya-9.55-fix-build-x86_64.patch
+Patch2:		amaya-fix-thotlib-png14.patch
 BuildRequires:	freetype-devel
 BuildRequires:	gtk2-devel
 BuildRequires:	imlib-devel
@@ -54,6 +53,7 @@ draft standards for HTML/XHTML.
 
 %prep
 %setup -q -n Amaya -c
+%patch2 -p1
 
 %build
 # use system mesa
