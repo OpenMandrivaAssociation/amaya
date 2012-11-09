@@ -1,0 +1,24 @@
+diff -urN Amaya/amaya/Makefile.in Amaya-patched/amaya/Makefile.in
+--- Amaya/amaya/Makefile.in	2009-11-10 02:37:47.000000000 +1000
++++ Amaya-patched/amaya/Makefile.in	2012-02-25 22:12:59.693840148 +1100
+@@ -21,7 +21,7 @@
+ 	  $(GL_LIBRARIES) $(GTK_GL_LIBRARIES) $(FREETYPE_LIBRARIES) $(XFT_LIBRARIES) \
+ 	  $(AMAYA_LIBWWW_LIBS) \
+ 	   @AMAYA_RAPTOR_LIBS@ \
+-          $(WX_LIBRARIES)
++          $(WX_LIBRARIES) -lpng15 -ljpeg
+ 
+ AMAYA	= @top_srcdir@/amaya
+ 
+diff -urN Amaya/thotlib/Makefile.in Amaya-patched/thotlib/Makefile.in
+--- Amaya/thotlib/Makefile.in	2009-11-16 20:56:04.000000000 +1000
++++ Amaya-patched/thotlib/Makefile.in	2012-02-25 22:12:13.889749637 +1100
+@@ -13,7 +13,7 @@
+ include ../Options
+ 
+ INCLUDES= -DHAVE_CONFIG_H -I.. -I@top_srcdir@/amaya/xpm ${THOTINCLUDES} $(GUI_INCLUDES) $(GL_INCLUDES) $(GTK_GL_INCLUDES) $(XFT_INCLUDES) $(FREETYPE_INCLUDES) ${EXTRA_INCLUDES}
+-LIBS	= -L. -L.. @LIBS@ $(IMGLIBS) $(GL_LIBRARIES) $(GTK_GL_LIBRARIES) $(XFT_LIBRARIES) $(FREETYPE_LIBRARIES) $(GTK_LIBRARIES) $(WX_LIBRARIES)
++LIBS	= -L. -L.. @LIBS@ $(IMGLIBS) $(GL_LIBRARIES) $(GTK_GL_LIBRARIES) $(XFT_LIBRARIES) $(FREETYPE_LIBRARIES) $(GTK_LIBRARIES) $(WX_LIBRARIES) -lpng15 -ljpeg
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@

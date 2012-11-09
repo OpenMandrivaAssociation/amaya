@@ -1,0 +1,16 @@
+diff -urN Amaya/batch/script_install_gnomekde.in Amaya-patched/batch/script_install_gnomekde.in
+--- Amaya/batch/script_install_gnomekde.in	2008-10-22 02:33:34.000000000 +1100
++++ Amaya-patched/batch/script_install_gnomekde.in	2012-02-25 23:04:59.909191201 +1100
+@@ -65,10 +65,10 @@
+ $ECHO "Comment[fr]=Editez le Web" >> $GNOMEKDEDIR/applications/amaya.desktop
+ $ECHO "Categories=Application;Network;Development;" >> $GNOMEKDEDIR/applications/amaya.desktop
+ $ECHO "Exec=amaya %u" >> $GNOMEKDEDIR/applications/amaya.desktop
+-$ECHO "Icon=amaya.png" >> $GNOMEKDEDIR/applications/amaya.desktop
++$ECHO "Icon=amaya" >> $GNOMEKDEDIR/applications/amaya.desktop
+ $ECHO "Terminal=false" >> $GNOMEKDEDIR/applications/amaya.desktop
+ $ECHO "Type=Application" >> $GNOMEKDEDIR/applications/amaya.desktop
+-$ECHO "MimeType=text/html;text/xml;application/xhtml+xml;application/xml" >> $GNOMEKDEDIR/applications/amaya.desktop
++$ECHO "MimeType=text/html;text/xml;application/xhtml+xml;application/xml;" >> $GNOMEKDEDIR/applications/amaya.desktop
+ 
+ # --- creating amaya.png
+ $ECHO "--> Creating $GNOMEKDEDIR/pixmaps/amaya.png"

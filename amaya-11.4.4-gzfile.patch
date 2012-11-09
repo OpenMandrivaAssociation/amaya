@@ -1,0 +1,24 @@
+diff -urN Amaya/amaya/html2thot.c Amaya-patched/amaya/html2thot.c
+--- Amaya/amaya/html2thot.c	2010-07-22 20:54:27.000000000 +1100
++++ Amaya-patched/amaya/html2thot.c	2012-02-25 21:31:46.000000000 +1100
+@@ -4349,7 +4349,7 @@
+       WorkBuffer = FileBuffer;
+     }
+   // need to read a new set of characters
+-  LastCharInWorkBuffer = gzread (infile, &FileBuffer[StartOfRead],
++  LastCharInWorkBuffer = gzread ((gzFile)infile, &FileBuffer[StartOfRead],
+                                  INPUT_FILE_BUFFER_SIZE - StartOfRead);
+   // add previous read characters not managed yet
+   LastCharInWorkBuffer += StartOfRead;
+diff -urN Amaya/amaya/Xml2thot.c Amaya-patched/amaya/Xml2thot.c
+--- Amaya/amaya/Xml2thot.c	2009-10-12 18:35:20.000000000 +1100
++++ Amaya-patched/amaya/Xml2thot.c	2012-02-25 21:34:02.000000000 +1100
+@@ -5847,7 +5847,7 @@
+   while (!endOfFile && !XMLNotWellFormed && !XMLInvalidToken)
+     {
+       /* read the XML file */
+-      res = gzread (infile, bufferRead, COPY_BUFFER_SIZE);
++      res = gzread ((gzFile)infile, bufferRead, COPY_BUFFER_SIZE);
+       if (res < 0)
+         return;
+ 
