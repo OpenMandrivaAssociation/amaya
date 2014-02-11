@@ -41,7 +41,7 @@ BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(raptor)
 BuildRequires:	pkgconfig(redland)
 BuildRequires:	pkgconfig(x11)
-BuildRequires:	pkgconfig(zlip)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 Amaya is a complete Web authoring tool with some browsing funtionalities
