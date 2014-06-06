@@ -1,0 +1,84 @@
+diff -urN Amaya/Amaya/batch/app.c Amaya-patched/Amaya/batch/app.c
+--- Amaya/Amaya/batch/app.c	2007-10-18 19:59:21.000000000 +1100
++++ Amaya-patched/Amaya/batch/app.c	2014-06-07 02:06:07.384197647 +1100
+@@ -1622,7 +1622,7 @@
+ 		  cmd [pIndex] = (char *) TtaGetMemory (strlen (fileName) + 1);
+ 		  strcpy (cmd [pIndex++], fileName);
+ #else  /* _WINDOWS */
+-		  sprintf (&cmd[i], "-I%s -C %s > %s", pwd, srceFileName, fileName);
++		  sprintf (&cmd[i], "-I%s %s > %s", pwd, srceFileName, fileName);
+ #endif /* _WINDOWS */
+ 		}
+ 	      else
+@@ -1635,7 +1635,7 @@
+ 		  cmd [pIndex] = (char *) TtaGetMemory (strlen (fileName) + 1);
+ 		  strcpy (cmd [pIndex++], fileName);
+ #else  /* _WINDOWS */
+-		  sprintf (&cmd[i], "-C %s > %s", srceFileName, fileName);
++		  sprintf (&cmd[i], "%s > %s", srceFileName, fileName);
+ #endif /* _WINDOWS */
+ 		}
+ #ifdef _WINDOWS
+diff -urN Amaya/Amaya/batch/prs.c Amaya-patched/Amaya/batch/prs.c
+--- Amaya/Amaya/batch/prs.c	2010-01-22 02:13:12.000000000 +1000
++++ Amaya-patched/Amaya/batch/prs.c	2014-06-07 02:05:55.383199832 +1100
+@@ -7210,7 +7210,7 @@
+               cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 1);
+               strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINGUI */
+-              sprintf (&cmd[i], "-I%s -C %s > %s", pwd, srceFileName, fname);
++              sprintf (&cmd[i], "-I%s %s > %s", pwd, srceFileName, fname);
+ #endif /* _WINGUI */
+             }
+           else
+@@ -7223,7 +7223,7 @@
+               cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 1);
+               strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINGUI */
+-              sprintf (&cmd[i], "-C %s > %s", srceFileName, fname);
++              sprintf (&cmd[i], "%s > %s", srceFileName, fname);
+ #endif /* _WINGUI */
+             }
+ #ifdef _WINGUI
+diff -urN Amaya/Amaya/batch/str.c Amaya-patched/Amaya/batch/str.c
+--- Amaya/Amaya/batch/str.c	2009-04-30 03:04:41.000000000 +1100
++++ Amaya-patched/Amaya/batch/str.c	2014-06-07 02:06:29.817408653 +1100
+@@ -3115,7 +3115,7 @@
+               cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 1);
+               strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINDOWS */
+-              sprintf (&cmd[i], "-I%s -C %s > %s", pwd, srceFileName, fname);
++              sprintf (&cmd[i], "-I%s %s > %s", pwd, srceFileName, fname);
+ #endif /* _WINDOWS */
+             }
+           else
+@@ -3130,7 +3130,7 @@
+               cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 1);
+               strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINDOWS */
+-              sprintf (&cmd[i], "-C %s > %s", srceFileName, fname);
++              sprintf (&cmd[i], "%s > %s", srceFileName, fname);
+ #endif /* _WINDOWS */
+             } 
+ #ifdef _WINDOWS
+diff -urN Amaya/Amaya/batch/tra.c Amaya-patched/Amaya/batch/tra.c
+--- Amaya/Amaya/batch/tra.c	2008-09-17 04:15:19.000000000 +1100
++++ Amaya-patched/Amaya/batch/tra.c	2014-06-07 02:06:46.503747778 +1100
+@@ -3606,7 +3606,7 @@
+ 	       cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 1);
+ 	       strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINGUI */
+-	       sprintf (&cmd[i], "-I%s -C %s > %s", pwd, srceFileName, fname);
++	       sprintf (&cmd[i], "-I%s %s > %s", pwd, srceFileName, fname);
+ #endif /* _WINGUI */
+ 	     }
+ 	   else
+@@ -3619,7 +3619,7 @@
+                cmd [pIndex] = (char *) TtaGetMemory (strlen (fname) + 2);
+                strcpy (cmd [pIndex++], fname);
+ #else  /* !_WINGUI */
+-               sprintf (&cmd[i], "-C %s > %s", srceFileName, fname);
++               sprintf (&cmd[i], "%s > %s", srceFileName, fname);
+ #endif /* _WINGUI */
+ 	     } 
+ #ifdef _WINGUI

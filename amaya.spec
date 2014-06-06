@@ -4,7 +4,7 @@
 Summary:	Web Browser/Editor from the World Wide Web Consortium
 Name:		amaya
 Version:	11.4.4
-Release:	2
+Release:	4
 License:	W3C License
 Group:		Networking/WWW
 Url:		http://www.w3.org/Amaya/
@@ -22,6 +22,7 @@ Patch0:		amaya-11.4.4-dso.patch
 Patch1:		amaya-11.4.4-gzfile.patch
 Patch2:		amaya-11.4.4-libpng15.patch
 Patch3:		amaya-11.4.4-desktop.patch
+Patch4:		amaya-11.4.4-gcc4.8.patch
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	jpeg-devel
@@ -68,6 +69,7 @@ for HTML/XHTML.
 %patch1 -p0
 %patch2 -p1
 %patch3 -p0
+%patch4 -p1
 
 %build
 # use system mesa
