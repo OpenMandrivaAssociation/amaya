@@ -84,7 +84,7 @@ ln -s ../configure ./configure
 	--enable-system-wx \
 	--prefix=%{_libdir}
 cp Options.orig Options
-make
+make CXXFLAGS="%{optflags}"
 
 %install
 cd Amaya/WX
