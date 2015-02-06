@@ -4,7 +4,7 @@
 Summary:	Web Browser/Editor from the World Wide Web Consortium
 Name:		amaya
 Version:	11.4.4
-Release:	4
+Release:	5
 License:	W3C License
 Group:		Networking/WWW
 Url:		http://www.w3.org/Amaya/
