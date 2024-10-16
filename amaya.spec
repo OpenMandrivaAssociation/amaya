@@ -7,7 +7,7 @@ Version:	11.4.4
 Release:	5
 License:	W3C License
 Group:		Networking/WWW
-Url:		http://www.w3.org/Amaya/
+Url:		https://www.w3.org/Amaya/
 Source0:	http://www.w3.org/Amaya/Distribution/amaya-fullsrc-%{version}.tgz
 Source1:	%{name}.1.bz2
 #2010-01-06
