@@ -23,6 +23,11 @@ Patch1:		amaya-11.4.4-gzfile.patch
 Patch2:		amaya-11.4.4-libpng15.patch
 Patch3:		amaya-11.4.4-desktop.patch
 Patch4:		amaya-11.4.4-gcc4.8.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	jpeg-devel
